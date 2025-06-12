@@ -30,6 +30,13 @@ def demand(p):
 def supply(p):
     return 5 + p - supply_shift
 
+# Create price range
+p = np.linspace(0, 30, 100)
+
+# Calculate demand and supply values
+d_vals = demand(p)
+s_vals = supply(p)
+
 # Calculate equilibrium price and quantity analytically
 diff = np.abs(d_vals - s_vals)
 eq_index = np.argmin(diff)
