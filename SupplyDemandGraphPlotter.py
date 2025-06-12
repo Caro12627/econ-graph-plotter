@@ -28,7 +28,7 @@ def demand(p):
     return 20 - p + demand_shift
 
 def supply(p):
-    return 5 + p + supply_shift
+    return 5 + p - supply_shift
 
 # Calculate equilibrium price and quantity analytically
 eq_price = (15 + demand_shift - supply_shift) / 2
