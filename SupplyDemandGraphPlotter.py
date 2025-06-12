@@ -71,14 +71,16 @@ with col2:
     elif supply_shift < 0 and demand_shift == 0:
         st.write("Supply Decreased -> shifted left -> Price Increased and Quantity Decreased -> Equilibrium Price Increased and Quantity Decreased")
     elif demand_shift > 0 and supply_shift > 0:
-        st.write("Demand Increased and Supply Increased -> Demand shifted right and Supply shifted right -> Price effect ambiguous and Quantity Increased")
+        st.write("Demand Increased and Supply Increased -> Demand shifted right and Supply shifted right -> Price effect indeterminable and Quantity Increased")
     elif demand_shift < 0 and supply_shift < 0:
-        st.write("Demand Decreased and Supply Decreased -> Demand shifted left and Supply shifted left -> Price effect ambiguous and Quantity Decreased")
+        st.write("Demand Decreased and Supply Decreased -> Demand shifted left and Supply shifted left -> Price effect indeterminable and Quantity Decreased")
     elif demand_shift > 0 and supply_shift < 0:
-        st.write("Demand Increased and Supply Decreased -> Demand shifted right and Supply shifted left -> Price Increased and Quantity effect ambiguous")
+        st.write("Demand Increased and Supply Decreased -> Demand shifted right and Supply shifted left -> Price Increased and Quantity effect indeterminable")
     elif demand_shift < 0 and supply_shift > 0:
-        st.write("Demand Decreased and Supply Increased -> Demand shifted left and Supply shifted right -> Price Decreased and Quantity effect ambiguous")
+        st.write("Demand Decreased and Supply Increased -> Demand shifted left and Supply shifted right -> Price Decreased and Quantity effect indeterminable")
     else:
         st.write("No Shift in Demand or Supply -> No Change in Equilibrium Price or Quantity")
 
-    st.write("Note: The equilibrium price and quantity are determined by the intersection of the demand and supply curves.")
+    st.write("Note: The equilibrium price and quantity are determined by the intersection of the demand and supply curves.
+                ONLY Quantity demanded gets shifted by price")
+    
