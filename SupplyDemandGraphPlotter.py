@@ -81,6 +81,5 @@ with col2:
     else:
         st.write("No Shift in Demand or Supply -> No Change in Equilibrium Price or Quantity")
 
-    st.write("Note: The equilibrium price and quantity are determined by the intersection of the demand and supply curves.
-                ONLY Quantity demanded gets shifted by price")
+    st.write("Note: The equilibrium price and quantity are determined by the intersection of the demand and supply curves.  ONLY Quantity demanded gets shifted by price")
     
