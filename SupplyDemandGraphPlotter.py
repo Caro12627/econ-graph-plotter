@@ -31,16 +31,10 @@ def supply(p):
     return 5 + p - supply_shift
 
 # Calculate equilibrium price and quantity analytically
-eq_price = (15 + demand_shift - supply_shift) / 2
-eq_quantity = demand(eq_price)
-
-# Define price range centered on equilibrium price (adjust so it stays >= 0)
-p_min = max(eq_price - 15, 0)
-p_max = eq_price + 15
-p = np.linspace(p_min, p_max, 200)
-
-d_vals = demand(p)
-s_vals = supply(p)
+diff = np.abs(d_vals - s_vals)
+eq_index = np.argmin(diff)
+eq_price = p[eq_index]
+eq_quantity = d_vals[eq_index]
 
 # Plotting
 fig, ax = plt.subplots(figsize=(8, 5))
@@ -50,8 +44,8 @@ ax.scatter(eq_price, eq_quantity, color='green', s=100, label='Equilibrium')
 ax.annotate("Equilibrium", (eq_price, eq_quantity), xytext=(eq_price + 1, eq_quantity),
             arrowprops=dict(arrowstyle="->"), fontsize=9)
 
-ax.set_xlabel("Price")
-ax.set_ylabel("Quantity")
+ax.set_xlabel("Quantity")
+ax.set_ylabel("Price")
 ax.legend()
 ax.grid(True)
 
